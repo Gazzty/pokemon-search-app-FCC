@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --margin-top: 5vh;
+    --dark-blue: #0D1B2A;
+    --light-blue: rgb(203, 205, 209);
+    --lighter-blue: #e0e1dd;
+    --violet: rgb(151, 52, 151);
+}
+body{
+    background-color: var(--dark-blue);
+}
+
+#logo{
+    width: 250px;
+}
+#main-container{
+    margin-top: var(--margin-top);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#title{
+    color: white;
+}
+
+#pokedex-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lighter-blue);
+    height: fit-content;
+    min-height: 500px;
+    width: 400px;
+    align-items: center;
+    border-radius: 1em;
+    padding-bottom: 30px;
+}
+
+.search-form{
+    margin-top: 10px;
+}
+#search-input{
+    height: 1.5rem;
+    text-indent: 5px;
+    border-radius: 0;
+    border: .5px solid black;
+}
+#search-input[type=text]:focus{
+    outline: 2px solid rgb(25, 60, 255);
+}
+#search-button{
+    background-color: var(--violet);
+    border: none;
+    color: white;
+    height: 2rem;
+    width: 75px;
+    margin-left: 20px;
+    border-radius: 1em;
+}
+
+#pokemon-display-container{
+    margin-top: 10px;
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-blue);
+    text-indent: 10px;
+}
+#pokemon-name-container{
+    margin-top: 10px;
+}
+#pokemon-name-container > *{
+    font-size: 1.2em;
+    width: fit-content;
+    display: inline;
+}
+#pokemon-size-container{
+    margin-top: 5px;
+}
+#pokemon-size-container > *{
+    width: fit-content;
+    display: inline;
+}
+#pokemon-display-container > img{
+    width: 180px;
+    height: 180px;
+    align-self: center;
+    margin-top: 10px;
+}
+#types{
+    display: flex;
+    flex-direction: row;
+}
+#types > p{
+    background-color: rgb(99, 241, 99);
+    margin-left: 20px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 2rem;
+    text-align: center;
+    align-content: center;
+    font-size: .8rem;
+    border-radius: 1em;
+}
+
+#stats-table{
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+    background-color: var(--lighter-blue);
+    border-spacing: 0;
+}
+th, td{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(151, 52, 151);
+    border: 3px solid var(--lighter-blue);
+    height: 30px;
+    color: white;
+}
