@@ -9,6 +9,7 @@
     --light-blue: rgb(203, 205, 209);
     --lighter-blue: #e0e1dd;
     --violet: rgb(151, 52, 151);
+    --dark-violet: #4F1C51;
 }
 body{
     background-color: var(--dark-blue);
@@ -56,6 +57,15 @@ body{
 }
 #search-button{
     background-color: var(--violet);
+    border: none;
+    color: white;
+    height: 2rem;
+    width: 75px;
+    margin-left: 20px;
+    border-radius: 1em;
+}
+#search-button:active{
+    background-color: var(--dark-violet);
     border: none;
     color: white;
     height: 2rem;
