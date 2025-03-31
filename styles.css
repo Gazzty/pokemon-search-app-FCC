@@ -77,14 +77,15 @@ body{
 #pokemon-display-container{
     margin-top: 10px;
     width: 90%;
-    height: 360px;
     display: flex;
     flex-direction: column;
     background-color: var(--light-blue);
     text-indent: 10px;
+    
 }
 #pokemon-name-container{
     margin-top: 10px;
+    height: 25px;
 }
 #pokemon-name-container > *{
     font-size: 1.2em;
@@ -93,6 +94,7 @@ body{
 }
 #pokemon-size-container{
     margin-top: 5px;
+    height: 25px;
 }
 #pokemon-size-container > *{
     width: fit-content;
@@ -106,6 +108,7 @@ body{
 #types{
     display: flex;
     flex-direction: row;
+    height: 40px;
 }
 #types > p{
     background-color: rgb(99, 241, 99);
