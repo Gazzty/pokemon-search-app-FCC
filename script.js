@@ -52,6 +52,12 @@ function get_types(data){
 
 search_button.addEventListener("click", (e) => {
     e.preventDefault()
+
+    if(user_input.value == ""){
+        alert("Please enter data")
+        return
+    }
+
     const user_pokemon = user_input.value
     pokemon_types.innerHTML = ""
 
