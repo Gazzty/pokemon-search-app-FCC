@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
         <title>Document</title>
     </head>
     <body>
@@ -15,7 +15,7 @@
             <div id="pokedex-container">
                 <form class="search-form">
                     <p id="form-title">Seach for Pokemón Name or ID:</p>
-                    <input type="text" id="search-input">
+                    <input type="text" id="search-input" required>
                     <button type="button" id="search-button">Search</button>
                 </form>
                 <div id="pokemon-display-container">
@@ -40,27 +40,27 @@
                     </tr>
                     <tr>
                         <td>HP:</td>
-                        <td></td>
+                        <td id="hp"></td>
                     </tr>
                     <tr>
                         <td>Attack:</td>
-                        <td></td>
+                        <td id="attack"></td>
                     </tr>
                     <tr>
                         <td>Defense:</td>
-                        <td></td>
+                        <td id="defense"></td>
                     </tr>
                     <tr>
                         <td>Sp. Attack:</td>
-                        <td></td>
+                        <td id="special-attack"></td>
                     </tr>
                     <tr>
                         <td>Sp. Defense:</td>
-                        <td></td>
+                        <td id="special-defense"></td>
                     </tr>
                     <tr>
                         <td>Speed</td>
-                        <td></td>
+                        <td id="speed"></td>
                     </tr>
                 </table>
             </div>
