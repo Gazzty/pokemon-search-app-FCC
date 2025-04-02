@@ -5,7 +5,7 @@ const user_input = document.getElementById("search-input")
 const search_button = document.getElementById("search-button")
 const pokemon_name = document.getElementById("pokemon-name")
 const pokemon_id = document.getElementById("pokemon-id")
-const pokemon_img = document.getElementById("pokemon-img")
+const pokemon_img = document.getElementById("sprite")
 const pokemon_weight = document.getElementById("weight")
 const pokemon_height = document.getElementById("height")
 const pokemon_types = document.getElementById("types")
@@ -40,6 +40,12 @@ const type_color = {
 const fetch_pokemon_api = async (pokemon) => {
     try {
         const res = await fetch(url + "/" + pokemon)
+        if (!res.ok) {
+            if (res.status === 404) {
+                alert("Pokémon not found")
+            }
+            throw new Error(`HTTP error! status: ${res.status}`)
+        }
         const data = await res.json()
         return data
     }
@@ -80,12 +86,7 @@ function get_types(data){
 search_button.addEventListener("click", (e) => {
     e.preventDefault()
 
-    if(user_input.value == ""){
-        alert("Please enter data")
-        return
-    }
-
-    const user_pokemon = user_input.value
+    const user_pokemon = user_input.value.toLowerCase()
     pokemon_types.innerHTML = ""
 
     fetch_pokemon_api(user_pokemon).then((pokemon_data) => {
