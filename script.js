@@ -9,6 +9,33 @@ const pokemon_img = document.getElementById("pokemon-img")
 const pokemon_weight = document.getElementById("weight")
 const pokemon_height = document.getElementById("height")
 const pokemon_types = document.getElementById("types")
+const pokemon_hp = document.getElementById("hp")
+const pokemon_attack = document.getElementById("attack")
+const pokemon_defense = document.getElementById("defense")
+const pokemon_special_attack = document.getElementById("special-attack")
+const pokemon_special_defense = document.getElementById("special-defense")
+const pokemon_speed = document.getElementById("speed")
+
+const type_color = {
+    fire: "#F08030",
+    bug: "#A8B820",
+    water: "#6890F0",
+    poison: "#A040A0",
+    flying: "#A890F0",
+    grass: "#78C850",
+    normal: "#A8A878",
+    ground: "#E0C068",
+    electric: "#F8D030",
+    fairy: "#EE99AC",
+    fighting: "#C03028",
+    psychic: "#F85888",
+    rock: "#B8A038",
+    ghost: "#705898",
+    ice: "#98D8D8",
+    steel: "#B8B8D0",
+    dragon: "#7038F8",
+    dark: "#705848"
+}
 
 const fetch_pokemon_api = async (pokemon) => {
     try {
@@ -70,8 +97,15 @@ search_button.addEventListener("click", (e) => {
         pokemon_height.innerText = `Height: ${pokemon_data.height}`
 
         pokemon_data.types.forEach((type) => {
-            pokemon_types.innerHTML += `<p>${type.type.name}</p>`
+            pokemon_types.innerHTML += `<p style="background-color:${type_color[type.type.name]};">${type.type.name}</p>`
         })
+        pokemon_hp.innerText = pokemon_data.stats[0].base_stat
+        pokemon_attack.innerText = pokemon_data.stats[1].base_stat
+        pokemon_defense.innerText = pokemon_data.stats[2].base_stat
+        pokemon_special_attack.innerText = pokemon_data.stats[3].base_stat
+        pokemon_special_defense.innerText = pokemon_data.stats[4].base_stat
+        pokemon_speed.innerText = pokemon_data.stats[5].base_stat
+
+
     })
 })
-
